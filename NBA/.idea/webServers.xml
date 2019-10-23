@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d97eb64d-4a65-4f33-b2ab-9204461512a9" name="servidor_vagrant" url="http://ejercicio.devel">
+        <fileTransfer host="ejercicio.devel" port="2222" rootFolder="/var/www/ejercicio.devel" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,13 +1,13 @@
 <?php
 
-
+require_once "Database.php";
 class bbdd
 {
 
     function insertarEquipo($equipo){
         $numeroJugadores = 0;
         $nombre = "";
-        $instanciaCon = ConexionBD::getInstance();
+        $instanciaCon = Database::getInstance();
         $conexionBD = $instanciaCon->getConnection();
 
         // Preparamos la sentencia
@@ -31,7 +31,7 @@ class bbdd
         $foto = 0;
         $id = $idEquipo;
 
-        $instanciaCon = ConexionBD::getInstance();
+        $instanciaCon = Database::getInstance();
         $conexionBD = $instanciaCon->getConnection();
 
         // Preparamos la sentencia
@@ -52,7 +52,7 @@ class bbdd
     }
 
     function todosEquipos() {
-        $conBD = ConexionBD::getInstance();
+        $conBD = Database ::getInstance();
         $mysqli = $conBD->getConnection();
         $sql= "SELECT ". tablaEquipos::ID . " , "
             . tablaEquipos::NOMBRE . " , "
@@ -70,7 +70,7 @@ class bbdd
         $id = $idEquipo;
         $result = null;
 
-        $instanciaCon = ConexionBD::getInstance();
+        $instanciaCon = Database::getInstance();
         $conexionBD = $instanciaCon->getConnection();
 
         // Preparamos la sentencia
@@ -100,7 +100,7 @@ class bbdd
 
     function eliminarEquipo($id){
         $idEquipo = 0;
-        $instanciaCon = ConexionBD::getInstance();
+        $instanciaCon = Database::getInstance();
         $conexionBD = $instanciaCon->getConnection();
 
         // Preparamos la sentencia
@@ -117,7 +117,7 @@ class bbdd
     }
 
     function eliminarJugador($nombre, $apellidos) {
-        $instanciaCon = ConexionBD::getInstance();
+        $instanciaCon = Database::getInstance();
         $conexionBD = $instanciaCon->getConnection();
         $nombreJugador = "";
         $apellidosJugador = "";
