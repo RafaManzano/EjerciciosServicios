@@ -67,30 +67,37 @@ class bbdd
         $apellidos = "";
         $edad = 0;
         $foto = 0;
-        $id = $idEquipo;
-        $result = null;
+        $id = 0;
+        $result = 0;
+        $filas = 0;
 
         $instanciaCon = Database::getInstance();
         $conexionBD = $instanciaCon->getConnection();
 
         // Preparamos la sentencia
-        $stmt= "SELECT ". tablaJugadores::NOMBRE . " , "
-            . tablaJugadores::APELLIDOS . " , "
-            . tablaJugadores::EDAD. " , "
-            . tablaJugadores::FOTO. " , "
-            . tablaJugadores::ID_EQUIPO
-            ." FROM ". tablaEquipos::TABLE_NAME
-            . "WHERE ". tablaJugadores::ID_EQUIPO. "= ?";
+        $stmt = $conexionBD ->prepare( "SELECT " .tablaJugadores::NOMBRE." , "
+            .tablaJugadores::APELLIDOS. " , "
+            .tablaJugadores::EDAD. " , "
+            .tablaJugadores::FOTO. " , "
+            .tablaJugadores::ID_EQUIPO
+            . " FROM " .tablaJugadores::TABLE_NAME
+            . " WHERE " .tablaJugadores::ID_EQUIPO . " =  ?" );
 
         // Vinculamos parámetros a variables
-        $stmt->bind_param('i', $id);
+        $stmt -> bind_param('i', $idEquipo);
 
         //Vinculamos el resultado a una variable
-        $stmt->bind_result($result);
-
-        $id = $idEquipo;
-
         $stmt->execute();
+
+        /* Store the result (to get properties) */
+        $stmt->store_result();
+
+        /* Get the number of rows */
+        $filas = $stmt->num_rows;
+
+        $result = $stmt -> bind_result( $nombre, $apellidos, $edad, $foto, $id);
+
+
 
         $stmt->close();
         $instanciaCon -> closeConnection();

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21a1f9a7-2803-423b-98ce-78ddca238f70" name="Default Changelist" comment="" />
+    <list default="true" id="21a1f9a7-2803-423b-98ce-78ddca238f70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/EjerciciosServicios.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bbdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/bbdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listadoJugadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/listadoJugadores.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +19,13 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1SaqTKcycS3gKlUbOMVrcnz2eqp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -53,10 +64,22 @@
       <option name="presentableId" value="Default" />
       <updated>1571812060596</updated>
       <workItem from="1571812062258" duration="4565000" />
+      <workItem from="1571844440277" duration="3223000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
