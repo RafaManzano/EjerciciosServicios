@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c7b26833-aa49-45ad-8457-2f7669a6cb5f" name="www.biblioteca.devel" url="http://biblioteca.devel:8080">
+        <fileTransfer host="biblioteca.devel" port="2222" rootFolder="/var/www/biblioteca.devel" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
