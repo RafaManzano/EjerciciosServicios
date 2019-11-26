@@ -73,4 +73,35 @@ class LibroController extends Controller
         $response->generate();
     }
 
+    public function managePutVerb(Request $request)
+    {
+        $id = null;
+        $response = null;
+        $code = null;
+        $body = null;
+
+        $body = $request->getBodyParameters();
+        //$json = $body->json_decode();
+        $titulo = $body->titulo;
+        $codigo = $body->codigo;
+        $numpag = $body->numpag;
+        //$libro = new LibroModel($body);
+        $libro = new LibroModel($codigo, $titulo, $numpag);
+
+        $funciona = LibroHandlerModel::actualizarLibro($libro);
+
+        if ($funciona) {
+            $code = '200';
+        }
+        else {
+            if (LibroHandlerModel::isValid($id)) {
+                $code = '404';
+            } else {
+                $code = '400';
+            }
+        }
+        $response = new Response($code, null, $libro, $request->getAccept());
+        $response->generate();
+    }
+
 }

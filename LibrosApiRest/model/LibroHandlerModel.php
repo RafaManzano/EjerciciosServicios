@@ -104,4 +104,20 @@ class LibroHandlerModel
         return $prep_query->execute();
     }
 
+    //put
+    public static function actualizarLibro($libro) {
+        $db = DatabaseModel::getInstance();
+        $db_connection = $db->getConnection();
+
+        $codigo = $libro->getCodigo();
+        $titulo = $libro->getTitulo();
+        $numpag = $libro->getNumpag();
+
+        $query = "UPDATE " . \ConstantesDB\ConsLibrosModel::TABLE_NAME . " SET " . \ConstantesDB\ConsLibrosModel::TITULO . " = ?, " . \ConstantesDB\ConsLibrosModel::PAGS . " = ? WHERE " .\ConstantesDB\ConsLibrosModel::COD ." = ?";
+        $prep_query = $db_connection->prepare($query);
+        $prep_query->bind_param('sii',  $titulo, $numpag, $codigo);
+        return $prep_query->execute();
+    }
+
+    //delete
 }

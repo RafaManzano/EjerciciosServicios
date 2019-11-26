@@ -53,14 +53,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="LibroController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/controller/LibroController.php">
+    <configuration name="LibroController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/controller/LibroController.php">
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHP Script.LibroController.php" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -76,6 +71,7 @@
       <workItem from="1574160810147" duration="1750000" />
       <workItem from="1574234637522" duration="3671000" />
       <workItem from="1574238340888" duration="3048000" />
+      <workItem from="1574767143784" duration="1018000" />
     </task>
     <servers />
   </component>
