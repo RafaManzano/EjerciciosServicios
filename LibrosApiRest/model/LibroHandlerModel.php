@@ -120,4 +120,15 @@ class LibroHandlerModel
     }
 
     //delete
+    public static function eliminarLibro($id)
+    {
+        $db = DatabaseModel::getInstance();
+        $db_connection = $db->getConnection();
+
+        $query = "DELETE FROM " . \ConstantesDB\ConsLibrosModel::TABLE_NAME . " WHERE " . \ConstantesDB\ConsLibrosModel::COD . " = ?, ";
+        $prep_query = $db_connection->prepare($query);
+        $prep_query->bind_param('i', $codigo);
+        return $prep_query->execute();
+    }
+
 }

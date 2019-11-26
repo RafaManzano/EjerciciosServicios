@@ -104,4 +104,32 @@ class LibroController extends Controller
         $response->generate();
     }
 
+    public function manageDeleteVerb(Request $request)
+    {
+        $id = null;
+        $response = null;
+        $code = null;
+        $body = null;
+
+        $body = $request->getBodyParameters();
+        //$json = $body->json_decode();
+        $codigo = $body->codigo;
+        //$libro = new LibroModel($body);
+
+        $funciona = LibroHandlerModel::actualizarLibro($codigo);
+
+        if ($funciona) {
+            $code = '200';
+        }
+        else {
+            if (LibroHandlerModel::isValid($id)) {
+                $code = '404';
+            } else {
+                $code = '400';
+            }
+        }
+        $response = new Response($code, null, $request->getAccept());
+        $response->generate();
+    }
+
 }
