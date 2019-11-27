@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="converter-gson-2.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/ies/nervion/rmanzano/libs/converter-gson-2.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ies/nervion/rmanzano/libs/gson-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ies/nervion/rmanzano/libs/okhttp-3.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ies/nervion/rmanzano/libs/okio-1.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ies/nervion/rmanzano/libs/retrofit-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
