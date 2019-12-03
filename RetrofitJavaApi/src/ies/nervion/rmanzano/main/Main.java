@@ -1,6 +1,8 @@
 package ies.nervion.rmanzano.main;
 
 import ies.nervion.rmanzano.callback.LibroCallback;
+import ies.nervion.rmanzano.callback.PostLibroCallback;
+import ies.nervion.rmanzano.clases.Libro;
 import ies.nervion.rmanzano.interfaces.LibroInterface;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -12,6 +14,7 @@ public class Main {
 
             Retrofit retrofit;
             LibroCallback libroCallback = new LibroCallback();
+            PostLibroCallback postLibroCallback = new PostLibroCallback();
 
             retrofit = new Retrofit.Builder()
                     .baseUrl(SERVER_URL)
@@ -20,7 +23,9 @@ public class Main {
 
             LibroInterface libroInter = retrofit.create(LibroInterface.class);
 
-            libroInter.getLibro(1).enqueue(libroCallback);
+            //libroInter.getLibro().enqueue(libroCallback);
+
+            libroInter.postLibro(new Libro(6000, "Titulazo", "850")).enqueue(postLibroCallback);
 
         }
 }

@@ -7,7 +7,16 @@ public class Libro {
 	private String titulo;
 	private String numpag;
 
-	
+    public Libro() {
+
+	}
+
+	public Libro(int id, String titulo, String numpag) {
+		this.id = id;
+		this.titulo = titulo;
+		this.numpag = numpag;
+	}
+
 	public int getId() {
 		return id;
 	}
