@@ -13,6 +13,8 @@ public class VoidLibroCallback implements Callback<Void> {
 
         code = resp.code();
         message = resp.message();
+
+        System.out.println(code + message);
     }
 
     @Override

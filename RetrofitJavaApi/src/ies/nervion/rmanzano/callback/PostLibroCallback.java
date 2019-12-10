@@ -32,7 +32,7 @@ public class PostLibroCallback implements Callback<Libro> {
         isSuccesful = resp.isSuccessful();
 
 
-        System.out.println(libro.getId() + libro.getTitulo() + libro.getNumpag());
+        System.out.println(libro.getCodigo() + libro.getTitulo() + libro.getNumpag());
     }
 
 

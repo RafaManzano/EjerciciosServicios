@@ -14,12 +14,11 @@ public interface LibroInterface {
 	@GET("/libro")
 	Call<List<Libro>> getLibro();
 
-    @Headers({"Content-type:application/json"})
     @POST("/libro")
-    Call<Void> postLibro(@Body Libro libro);
+    Call<Libro> postLibro(@Body Libro libro);
 
     @PUT("/libro")
-	Call<Void> putLibro(@Body Libro libro);
+	Call<Libro> putLibro(@Body Libro libro);
 
     @DELETE("/libro/{id}")
 	Call<Void> deleteLibro(@Path("id")int id);

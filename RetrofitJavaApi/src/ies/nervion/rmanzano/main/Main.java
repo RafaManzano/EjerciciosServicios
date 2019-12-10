@@ -28,12 +28,13 @@ public class Main {
 
             //libroInter.getLibro().enqueue(libroCallback);
 
-            //Todo Post no esta funcionando correctamente
-            //libroInter.postLibro(new Libro(2000, "Titulazo", 850)).enqueue(voidLibroCallback);
+            libroInter.postLibro(new Libro( "Titulazo", 850)).enqueue(postLibroCallback);
 
-            libroInter.putLibro(new Libro(4, "Modificando Put desde Intelij", 25)).enqueue(voidLibroCallback);
+            //libroInter.putLibro(new Libro(1, "Modificando Put desde Intelij", 25)).enqueue(postLibroCallback);
 
-            //libroInter.deleteLibro(4).enqueue(voidLibroCallback);
+            //libroInter.deleteLibro(2002).enqueue(voidLibroCallback);
+
+            //libroInter.getLibro().enqueue(libroCallback);
 
         }
 }

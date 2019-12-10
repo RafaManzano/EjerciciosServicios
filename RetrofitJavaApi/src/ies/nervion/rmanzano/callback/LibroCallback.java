@@ -41,7 +41,7 @@ public class LibroCallback implements Callback<List<Libro>>{
 	isSuccesful = resp.isSuccessful();
 
 	
-	libro.stream().forEach(a -> System.out.println(a.getId() + a.getTitulo() + a.getNumpag()));
+	libro.stream().forEach(a -> System.out.println(a.getCodigo() + a.getTitulo() + a.getNumpag()));
 	}
 	
 

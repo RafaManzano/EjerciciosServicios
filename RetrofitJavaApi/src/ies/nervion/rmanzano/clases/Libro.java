@@ -3,18 +3,18 @@ package ies.nervion.rmanzano.clases;
 
 
 public class Libro {
-	private int id;
+	private int codigo;
 	private String titulo;
 	private int numpag;
 
     public Libro() {
-        this.id = 0;
+        this.codigo = 0;
         this.titulo = "Defecto";
         this.numpag = 0;
 	}
 
-	public Libro(int id, String titulo, int numpag) {
-		this.id = id;
+	public Libro(int codigo, String titulo, int numpag) {
+		this.codigo = codigo;
 		this.titulo = titulo;
 		this.numpag = numpag;
 	}
@@ -24,11 +24,11 @@ public class Libro {
     	this.numpag = numpag;
 	}
 
-	public int getId() {
-		return id;
+	public int getCodigo() {
+		return codigo;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCodigo(int id) {
+		this.codigo = codigo;
 	}
 	public int getNumpag() {
 		return numpag;
