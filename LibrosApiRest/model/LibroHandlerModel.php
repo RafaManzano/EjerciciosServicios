@@ -94,13 +94,13 @@ class LibroHandlerModel
         $db = DatabaseModel::getInstance();
         $db_connection = $db->getConnection();
 
-        $codigo = $libro->getCodigo();
+        //$codigo = $libro->getCodigo();
         $titulo = $libro->getTitulo();
         $numpag = $libro->getNumpag();
 
-        $query = "INSERT INTO " . \ConstantesDB\ConsLibrosModel::TABLE_NAME . " VALUES (?,?,?);";
+        $query = "INSERT INTO " . \ConstantesDB\ConsLibrosModel::TABLE_NAME . "( " . \ConstantesDB\ConsLibrosModel::TITULO . " , " .\ConstantesDB\ConsLibrosModel::PAGS .") VALUES (?,?);";
         $prep_query = $db_connection->prepare($query);
-        $prep_query->bind_param('isi', $codigo, $titulo, $numpag);
+        $prep_query->bind_param('si',  $titulo, $numpag);
         return $prep_query->execute();
     }
 

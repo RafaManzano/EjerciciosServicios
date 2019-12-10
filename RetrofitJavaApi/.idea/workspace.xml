@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd8484cc-748e-48c7-ad10-0e013642bf57" name="Default Changelist" comment="" />
+    <list default="true" id="dd8484cc-748e-48c7-ad10-0e013642bf57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ies/nervion/rmanzano/callback/VoidLibroCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibrosApiRest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LibrosApiRest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibrosApiRest/controller/LibroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../LibrosApiRest/controller/LibroController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/LibroCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/LibroCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/PostLibroCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/PostLibroCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/clases/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/clases/Libro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/interfaces/LibroInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/interfaces/LibroInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RetrofitJavaApi/ies/nervion/rmanzano/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ies/nervion/rmanzano/callback/PostLibroCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ies/nervion/rmanzano/callback/PostLibroCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ies/nervion/rmanzano/clases/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ies/nervion/rmanzano/clases/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ies/nervion/rmanzano/interfaces/LibroInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ies/nervion/rmanzano/interfaces/LibroInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ies/nervion/rmanzano/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ies/nervion/rmanzano/main/Main.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +30,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1UBzDGG15r7vdM1SJRSLedOG5kC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ies/nervion/rmanzano/callback" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -52,15 +80,8 @@
       <option name="MAIN_CLASS_NAME" value="ies.nervion.rmanzano.main.Main" />
       <module name="RetrofitJavaApi" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,15 +92,37 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ies/nervion/rmanzano/callback/PostLibroCallback.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd8484cc-748e-48c7-ad10-0e013642bf57" name="Default Changelist" comment="" />
+      <created>1575730798518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575730798518</updated>
+      <workItem from="1575730810490" duration="1934000" />
+      <workItem from="1575734008356" duration="2272000" />
+      <workItem from="1575736409505" duration="2015000" />
+      <workItem from="1575834072481" duration="581000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

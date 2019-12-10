@@ -52,10 +52,13 @@ class LibroController extends Controller
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
         $titulo = $body->titulo;
-        $codigo = $body->codigo;
+        //$codigo = $body->codigo;
         $numpag = $body->numpag;
-        //$libro = new LibroModel($body);
-        $libro = new LibroModel($codigo, $titulo, $numpag);
+        $libro = new LibroModel1($titulo, $numpag);
+        //$libro = new LibroModel($titulo, $numpag);
+        //$libro = new LibroModel();
+        $libro -> setTitulo($titulo);
+        $libro -> setNumpag($numpag);
 
         $funciona = LibroHandlerModel::insertLibro($libro);
 

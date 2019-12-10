@@ -15,7 +15,7 @@ public class PostLibroCallback implements Callback<Libro> {
 
 
     @Override
-    public void onResponse(Call<Libro> call, Response<Libro> response) {
+    public void onResponse(Call<Libro> call, Response<Libro> resp) {
         // TODO Auto-generated method stub
         Libro libro = null;
         String contentType;
@@ -23,13 +23,18 @@ public class PostLibroCallback implements Callback<Libro> {
         String message;
         boolean isSuccesful;
 
-        code = response.code();
-        if(response.isSuccessful()) {
+        libro = resp.body();
 
-        }
+        Headers cabeceras = resp.headers();
+        contentType = cabeceras.get("Content-Type");
+        code = resp.code();
+        message = resp.message();
+        isSuccesful = resp.isSuccessful();
 
-        //System.out.println(libro.get(0).getId()+" "+libro.get(0).getTitulo()+" "+libro.get(0).getNumpag());
+
+        System.out.println(libro.getId() + libro.getTitulo() + libro.getNumpag());
     }
+
 
     @Override
     public void onFailure(Call<Libro> call, Throwable throwable) {

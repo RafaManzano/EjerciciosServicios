@@ -2,6 +2,7 @@ package ies.nervion.rmanzano.main;
 
 import ies.nervion.rmanzano.callback.LibroCallback;
 import ies.nervion.rmanzano.callback.PostLibroCallback;
+import ies.nervion.rmanzano.callback.VoidLibroCallback;
 import ies.nervion.rmanzano.clases.Libro;
 import ies.nervion.rmanzano.interfaces.LibroInterface;
 import retrofit2.Retrofit;
@@ -15,6 +16,8 @@ public class Main {
             Retrofit retrofit;
             LibroCallback libroCallback = new LibroCallback();
             PostLibroCallback postLibroCallback = new PostLibroCallback();
+            VoidLibroCallback voidLibroCallback = new VoidLibroCallback();
+
 
             retrofit = new Retrofit.Builder()
                     .baseUrl(SERVER_URL)
@@ -25,7 +28,12 @@ public class Main {
 
             //libroInter.getLibro().enqueue(libroCallback);
 
-            libroInter.postLibro(new Libro(6000, "Titulazo", "850")).enqueue(postLibroCallback);
+            //Todo Post no esta funcionando correctamente
+            //libroInter.postLibro(new Libro(2000, "Titulazo", 850)).enqueue(voidLibroCallback);
+
+            libroInter.putLibro(new Libro(4, "Modificando Put desde Intelij", 25)).enqueue(voidLibroCallback);
+
+            //libroInter.deleteLibro(4).enqueue(voidLibroCallback);
 
         }
 }

@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7424f62b-e8a6-4770-8530-d23bf7c03eb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RetrofitJavaApi/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/callback/VoidLibroCallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/LibroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LibroController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/LibroHandlerModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/LibroHandlerModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NBA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NBA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/LibroCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/LibroCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/PostLibroCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/callback/PostLibroCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/clases/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/clases/Libro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/interfaces/LibroInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/interfaces/LibroInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/out/production/RetrofitJavaApi/ies/nervion/rmanzano/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/callback/PostLibroCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/callback/PostLibroCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/clases/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/clases/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/interfaces/LibroInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/interfaces/LibroInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RetrofitJavaApi/src/ies/nervion/rmanzano/main/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +95,11 @@
       <workItem from="1574238340888" duration="3048000" />
       <workItem from="1574767143784" duration="1018000" />
       <workItem from="1574794498254" duration="380000" />
+      <workItem from="1575731201023" duration="1965000" />
+      <workItem from="1575733964961" duration="1498000" />
+      <workItem from="1575736423009" duration="1992000" />
+      <workItem from="1575834022165" duration="624000" />
+      <workItem from="1575834806201" duration="391000" />
     </task>
     <servers />
   </component>
@@ -96,7 +111,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
