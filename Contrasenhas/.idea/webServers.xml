@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c75a33ab-a3a4-4d6e-a753-fa59806b81b5" name="www.contrasenhas.devel" url="http://contrasenas.devel">
+        <fileTransfer host="contrasenas.devel" port="2222" rootFolder="/var/www/contrasenas.devel" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

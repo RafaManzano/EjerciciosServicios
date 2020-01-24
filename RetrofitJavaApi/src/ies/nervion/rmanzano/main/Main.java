@@ -27,12 +27,13 @@ public class Main {
             LibroInterface libroInter = retrofit.create(LibroInterface.class);
 
             //libroInter.getLibro().enqueue(libroCallback);
+            //libroInter.getLibro(1234).enqueue(libroCallback);
 
-            libroInter.postLibro(new Libro( "Titulazo", 850)).enqueue(postLibroCallback);
+            //libroInter.postLibro(new Libro( "LibroNuevo", 2)).enqueue(postLibroCallback);
 
-            //libroInter.putLibro(new Libro(1, "Modificando Put desde Intelij", 25)).enqueue(postLibroCallback);
+            //libroInter.putLibro(new Libro(4, "Modificando Put desde Intelij", 25)).enqueue(postLibroCallback);
 
-            //libroInter.deleteLibro(2002).enqueue(voidLibroCallback);
+            //libroInter.deleteLibro(1234).enqueue(voidLibroCallback);
 
             //libroInter.getLibro().enqueue(libroCallback);
 
