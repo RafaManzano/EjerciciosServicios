@@ -119,7 +119,7 @@ class LibroController extends Controller
         $codigo = $body->codigo;
         //$libro = new LibroModel($body);
 
-        $funciona = LibroHandlerModel::actualizarLibro($codigo);
+        $funciona = LibroHandlerModel::eliminarLibro($codigo);
 
         if ($funciona) {
             $code = '200';
