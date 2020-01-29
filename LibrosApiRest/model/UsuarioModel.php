@@ -7,13 +7,14 @@ class UsuarioModel implements JsonSerializable
     private $name;
     private $password;
 
+    /*
     public function __construct($id,$name,$password)
     {
         $this->id=$id;
         $this->name=$name;
         $this->password=$password;
     }
-
+*/
     /**
      * Specify data which should be serialized to JSON
      * @link http://php.net/manual/en/jsonserializable.jsonserialize.php

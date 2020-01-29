@@ -2,6 +2,8 @@
 
 require_once "Request.php";
 require_once "Response.php";
+require_once "model/Autentication.php";
+
 
 //Autoload rules
 spl_autoload_register('apiAutoload');
@@ -67,17 +69,24 @@ $req = new Request($verb, $url_elements, $query_string, $body, $content_type, $a
 
 // route the request to the right place
 $controller_name = ucfirst($url_elements[1]) . 'Controller';
-if (class_exists($controller_name)) {
-    $controller = new $controller_name();
-    $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
-    $controller->$action_name($req);
-    //$result = $controller->$action_name($req);
-    //print_r($result);
-} //If class does not exist, we will send the request to NotFoundController
+if(Autentication::checkUserPassword($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW'])) {
+    if (class_exists($controller_name)) {
+        $controller = new $controller_name();
+        $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
+        $controller->$action_name($req);
+        //$result = $controller->$action_name($req);
+        //print_r($result);
+    } //If class does not exist, we will send the request to NotFoundController
+    else {
+        $controller = new NotFoundController();
+        $controller->manage($req); //We don't care about the HTTP verb
+    }
+}
 else {
-    $controller = new NotFoundController();
+    $controller = new NotPermissionController();
     $controller->manage($req); //We don't care about the HTTP verb
 }
+
 
 //DEBUG / TESTING:
 //echo "<br/>URL_ELEMENTS:" ;

@@ -35,7 +35,7 @@ class UsuarioController extends Controller
         $body = $request->getBodyParameters();
         $name = $body->name;
         $password = $body->password;
-        $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+        $hashPassword = password_hash($password, PASSWORD_DEFAULT); //Deberia estar en una clase Autentication
 
         $usuario = new UsuarioModel();
         $usuario -> setName($name);
