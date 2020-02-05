@@ -63,24 +63,50 @@ if (isset($_SERVER['HTTP_ACCEPT'])) {
     $accept = $_SERVER['HTTP_ACCEPT'];
 }
 
+/*
+ * Para el usuario y la contraseña de la cabecera Authorization, en el caso de que vengan vacias
+ */
+if (isset($_SERVER['PHP_AUTH_USER'])) {
+    $usuario = $_SERVER['PHP_AUTH_USER'];
+}
+else {
+    $usuario = "";
+}
 
-$req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept);
+if (isset($_SERVER['PHP_AUTH_PW'])) {
+    $contrasena = $_SERVER['PHP_AUTH_PW'];
+}
+else {
+    $contrasena = "";
+}
+
+$req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena);
 
 
 // route the request to the right place
 $controller_name = ucfirst($url_elements[1]) . 'Controller';
-if(Autentication::checkUserPassword($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW'])) {
-    if (class_exists($controller_name)) {
-        $controller = new $controller_name();
-        $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
-        $controller->$action_name($req);
-        //$result = $controller->$action_name($req);
-        //print_r($result);
-    } //If class does not exist, we will send the request to NotFoundController
-    else {
-        $controller = new NotFoundController();
-        $controller->manage($req); //We don't care about the HTTP verb
+
+
+
+if(Autentication::checkUserPassword($usuario, $contrasena) || (ucfirst(strtolower($verb)) == "Post" && ucfirst($url_elements[1]) == "Usuario")) {
+    if (!Autentication::checkUser($req) || ucfirst(strtolower($verb)) == "Get") {
+        if (class_exists($controller_name)) {
+            $controller = new $controller_name();
+            $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
+            $controller->$action_name($req);
+            //$result = $controller->$action_name($req);
+            //print_r($result);
+        } //If class does not exist, we will send the request to NotFoundController
+        else {
+            $controller = new NotFoundController();
+            $controller->manage($req); //We don't care about the HTTP verb
+        }
     }
+    else {
+        $controller = new ConflictController(); //Lo mejor seria el 409 Conflict
+        $controller->manage($req);
+    }
+
 }
 else {
     $controller = new NotPermissionController();

@@ -33,4 +33,28 @@ class Autentication
         return password_verify($password, $hashPWD);
     }
 
+    static function checkUser($request) {
+        $pasa = false;
+        $nombre = "";
+        $name = "";
+        $db = DatabaseModel::getInstance();
+        $db_connection = $db -> getConnection();
+        $body = null;
+
+        $body = $request->getBodyParameters();
+        $nombre = $body->name;
+
+        $query = "SELECT " . \ConstantesDB\ConsUsuariosModel::NAME. " FROM " . \ConstantesDB\ConsUsuariosModel::TABLE_NAME . " WHERE " . \ConstantesDB\ConsUsuariosModel::NAME . " = ? ";
+        $prep_query = $db_connection -> prepare($query);
+        $prep_query -> bind_param('s', $nombre);
+        $prep_query -> execute();
+        $prep_query -> bind_result( $name);
+        while($prep_query -> fetch()) {
+            if($nombre == $name) {
+                $pasa = true;
+            }
+        }
+
+        return $pasa;
+    }
 }

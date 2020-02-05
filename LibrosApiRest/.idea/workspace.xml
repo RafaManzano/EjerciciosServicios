@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7424f62b-e8a6-4770-8530-d23bf7c03eb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/NotPermissionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Autentication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/ConflictController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UsuarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/UsuarioHandlerModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UsuarioHandlerModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/UsuarioModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UsuarioModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Autentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Autentication.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +44,15 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/model" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/controller" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,7 +94,8 @@
       <workItem from="1575834022165" duration="624000" />
       <workItem from="1575834806201" duration="391000" />
       <workItem from="1580209983399" duration="2070000" />
-      <workItem from="1580283196304" duration="4782000" />
+      <workItem from="1580283196304" duration="4965000" />
+      <workItem from="1580887657011" duration="5280000" />
     </task>
     <servers />
   </component>
@@ -119,11 +118,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/controller/UsuarioController.php</url>
-          <line>43</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/controller/UsuarioController.php</url>
           <line>27</line>
