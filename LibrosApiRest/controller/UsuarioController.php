@@ -31,6 +31,7 @@ class UsuarioController extends Controller
         $response = null;
         $code = null;
         $body = null;
+        $header = null;
 
         $body = $request->getBodyParameters();
         $name = $body->name;
@@ -45,6 +46,8 @@ class UsuarioController extends Controller
 
         if ($funciona) {
             $code = '200';
+            $cadena = Autentication::generateToken($usuario -> getName());
+            $header['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (UsuarioHandlerModel::isValid($id)) {
@@ -53,7 +56,7 @@ class UsuarioController extends Controller
                 $code = '400';
             }
         }
-        $response = new Response($code, null, $usuario, $request->getAccept());
+        $response = new Response($code, $header, $usuario, $request->getAccept());
         $response->generate();
 
     }
