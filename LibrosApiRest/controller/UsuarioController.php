@@ -32,6 +32,8 @@ class UsuarioController extends Controller
         $code = null;
         $body = null;
         $header = null;
+        $funciona = false;
+
 
         $body = $request->getBodyParameters();
         $name = $body->name;
@@ -42,19 +44,23 @@ class UsuarioController extends Controller
         $usuario -> setName($name);
         $usuario -> setPassword($hashPassword);
 
-        $funciona = UsuarioHandlerModel::postUsuario($usuario);
-
-        if ($funciona) {
-            $code = '200';
-            $cadena = Autentication::generateToken();
+        if(!Autentication::checkUser($request)) {
+            $cadena = $request -> getLlave();
             $header['Authorization'] = "Bearer " . $cadena;
+            $funciona = UsuarioHandlerModel::postUsuario($usuario);
+            if($funciona) {
+                $code = '200';
+            }
+            else {
+                if (UsuarioHandlerModel::isValid($id)) {
+                    $code = '404';
+                } else {
+                    $code = '400';
+                }
+            }
         }
         else {
-            if (UsuarioHandlerModel::isValid($id)) {
-                $code = '404';
-            } else {
-                $code = '400';
-            }
+            $code = '409';
         }
         $response = new Response($code, $header, $usuario, $request->getAccept());
         $response->generate();

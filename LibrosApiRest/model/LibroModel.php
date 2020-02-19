@@ -7,12 +7,14 @@ class LibroModel implements JsonSerializable
     private $codigo;
     private $numpag;
 
+    /*
     public function __construct($cod,$tit,$pag)
     {
         $this->codigo=$cod;
         $this->titulo=$tit;
         $this->numpag=$pag;
     }
+    */
 
     /**
      * Specify data which should be serialized to JSON

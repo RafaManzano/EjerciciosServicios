@@ -58,7 +58,11 @@ class LibroHandlerModel
             $prep_query->bind_result($cod, $tit, $pag);
             while ($prep_query->fetch()) {
                 $tit = utf8_encode($tit);
-                $libro = new LibroModel($cod, $tit, $pag);
+                //$libro = new LibroModel($cod, $tit, $pag);
+                $libro = new LibroModel();
+                $libro -> setCodigo($cod);
+                $libro -> setTitulo($tit);
+                $libro -> setNumpag($pag);
                 $listaLibros[] = $libro;
             }
 

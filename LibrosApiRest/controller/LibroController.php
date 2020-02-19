@@ -7,13 +7,14 @@ class LibroController extends Controller
 {
     public function manageGetVerb(Request $request)
     {
+        //Para el token
+        $cadena = $request ->getLlave();
+        $token['Authorization'] = "Bearer " . $cadena;
 
         $listaLibros = null;
         $id = null;
         $response = null;
         $code = null;
-        $token = "";
-        $cadena = "";
 
         //if the URI refers to a libro entity, instead of the libro collection
         if (isset($request->getUrlElements()[2])) {
@@ -25,9 +26,6 @@ class LibroController extends Controller
 
         if ($listaLibros != null) {
             $code = '200';
-            $cadena = Autentication::generateToken();
-            $token['Authorization'] = "Bearer " . $cadena;
-
         } else {
 
             //We could send 404 in any case, but if we want more precission,
@@ -52,17 +50,19 @@ class LibroController extends Controller
         $response = null;
         $code = null;
         $body = null;
-        $token = "";
-        $cadena = "";
+
+        //Para el token
+        $cadena = $request ->getLlave();
+        $token['Authorization'] = "Bearer " . $cadena;
 
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
         $titulo = $body->titulo;
         //$codigo = $body->codigo;
         $numpag = $body->numpag;
-        $libro = new LibroModel1($titulo, $numpag);
+        //$libro = new LibroModel1($titulo, $numpag);
         //$libro = new LibroModel($titulo, $numpag);
-        //$libro = new LibroModel();
+        $libro = new LibroModel();
         $libro -> setTitulo($titulo);
         $libro -> setNumpag($numpag);
 
@@ -70,8 +70,6 @@ class LibroController extends Controller
 
         if ($funciona) {
             $code = '200';
-            $cadena = Autentication::generateToken();
-            $token['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (LibroHandlerModel::isValid($id)) {
@@ -90,23 +88,25 @@ class LibroController extends Controller
         $response = null;
         $code = null;
         $body = null;
-        $token = "";
-        $cadena = "";
+        //Para el token
+        $cadena = $request ->getLlave();
+        $token['Authorization'] = "Bearer " . $cadena;
 
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
         $titulo = $body->titulo;
         $codigo = $body->codigo;
         $numpag = $body->numpag;
-        //$libro = new LibroModel($body);
-        $libro = new LibroModel($codigo, $titulo, $numpag);
+        $libro = new LibroModel();
+        $libro -> setCodigo($codigo);
+        $libro -> setTitulo($titulo);
+        $libro -> setNumpag($numpag);
+        //$libro = new LibroModel($codigo, $titulo, $numpag);
 
         $funciona = LibroHandlerModel::actualizarLibro($libro);
 
         if ($funciona) {
             $code = '200';
-            $cadena = Autentication::generateToken();
-            $token['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (LibroHandlerModel::isValid($id)) {
@@ -125,7 +125,10 @@ class LibroController extends Controller
         $response = null;
         $code = null;
         $body = null;
-        $token = "";
+
+        //Para el token
+        $cadena = $request ->getLlave();
+        $token['Authorization'] = "Bearer " . $cadena;
 
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
@@ -136,8 +139,6 @@ class LibroController extends Controller
 
         if ($funciona) {
             $code = '200';
-            $cadena = Autentication::generateToken();
-            $token['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (LibroHandlerModel::isValid($id)) {

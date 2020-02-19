@@ -1,9 +1,11 @@
 <?php
 
 use Firebase\JWT\JWT;
+use Firebase\JWT\SignatureInvalidException;
 
 require_once "JWT.php" ;
 require_once "ConsUsuariosModel.php" ;
+require_once "SignatureInvalidException.php";
 
 class Autentication
 {
@@ -37,7 +39,7 @@ class Autentication
                 JWT::decode($token, $llave, array('HS256'));
                 $pasa = true;
             }
-            catch (Exception $e) {
+            catch (SignatureInvalidException $e) {
                 echo 'Ha ocurrido un error de autenticacion';
             }
 
@@ -78,7 +80,8 @@ class Autentication
     static function generateToken() {
         $llave = "compadre";
         $payload = array(
-            "iss" => "http://biblioteca.devel"
+            "iss" => "http://biblioteca.devel",
+            "exp" => time() + 500
         );
 
         $jwt = JWT::encode($payload, $llave);

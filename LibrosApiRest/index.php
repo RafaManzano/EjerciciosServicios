@@ -80,19 +80,18 @@ else {
     $contrasena = "";
 }
 
-$req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena);
-
-$token = Autentication::getBearerToken();
-
+$llave = Autentication::getBearerToken();
+$req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena, $llave);
 
 // route the request to the right place
 $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
 
 
-if(Autentication::checkAuthentication($usuario, $contrasena, $token) || (ucfirst(strtolower($verb)) == "Post" && ucfirst($url_elements[1]) == "Usuario")) {
-    if (ucfirst(strtolower($verb)) == "Get" || !Autentication::checkUser($req) ) {
+if(Autentication::checkAuthentication($usuario, $contrasena, $llave) || (ucfirst(strtolower($verb)) == "Post" && ucfirst($url_elements[1]) == "Usuario")) {
         if (class_exists($controller_name)) {
+            $llave = Autentication::generateToken();
+            $req -> setLlave($llave);
             $controller = new $controller_name();
             $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
             $controller->$action_name($req);
@@ -103,11 +102,6 @@ if(Autentication::checkAuthentication($usuario, $contrasena, $token) || (ucfirst
             $controller = new NotFoundController();
             $controller->manage($req); //We don't care about the HTTP verb
         }
-    }
-    else {
-        $controller = new ConflictController(); //Lo mejor seria el 409 Conflict
-        $controller->manage($req);
-    }
 
 }
 else {

@@ -11,13 +11,19 @@ class Request
     private $format;
     //in $accept we store the format of the content that the server will send
     private $accept;
+    private $usuario;
+    private $contrasena;
+    private $llave;
 
-    public function __construct($verb, $url_elements, $query_string, $body, $content_type, $accept)
+    public function __construct($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena, $llave)
     {
         $this->verb = $verb;
         $this->url_elements = $url_elements;
         $this->query_string = $query_string;
         $this->parseBody($body, $content_type);
+        $this ->usuario = $usuario;
+        $this -> contrasena = $contrasena;
+        $this-> llave = $llave;
 
         switch ($accept) {
             case 'application/json':
@@ -167,5 +173,54 @@ class Request
     {
         $this->accept = $accept;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * @param mixed $usuario
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContrasena()
+    {
+        return $this->contrasena;
+    }
+
+    /**
+     * @param mixed $contrasena
+     */
+    public function setContrasena($contrasena)
+    {
+        $this->contrasena = $contrasena;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLlave()
+    {
+        return $this->llave;
+    }
+
+    /**
+     * @param mixed $llave
+     */
+    public function setLlave($llave)
+    {
+        $this->llave = $llave;
+    }
+
 
 }
