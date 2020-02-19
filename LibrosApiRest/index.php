@@ -91,7 +91,7 @@ $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
 
 if(Autentication::checkAuthentication($usuario, $contrasena, $token) || (ucfirst(strtolower($verb)) == "Post" && ucfirst($url_elements[1]) == "Usuario")) {
-    if (!Autentication::checkUser($req) || ucfirst(strtolower($verb)) == "Get") {
+    if (ucfirst(strtolower($verb)) == "Get" || !Autentication::checkUser($req) ) {
         if (class_exists($controller_name)) {
             $controller = new $controller_name();
             $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';

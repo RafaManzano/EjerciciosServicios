@@ -57,6 +57,7 @@ class Autentication
         $db_connection = $db -> getConnection();
         $body = null;
 
+
         $body = $request->getBodyParameters();
         $nombre = $body->name;
 
@@ -74,11 +75,10 @@ class Autentication
         return $pasa;
     }
 
-    static function generateToken($name) {
+    static function generateToken() {
         $llave = "compadre";
         $payload = array(
-            "iss" => "http://biblioteca.devel",
-            "name" => $name
+            "iss" => "http://biblioteca.devel"
         );
 
         $jwt = JWT::encode($payload, $llave);

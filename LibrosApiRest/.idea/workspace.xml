@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7424f62b-e8a6-4770-8530-d23bf7c03eb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BeforeValidException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExpiredException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JWT.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SignatureInvalidException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/LibroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LibroController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UsuarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Autentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Autentication.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +34,11 @@
   <component name="PhpWebServerValidation" deployment_server_id="c7b26833-aa49-45ad-8457-2f7669a6cb5f" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="REMOTE" web_path_to_validation_script="http://127.0.0.1/" />
   <component name="ProjectId" id="1TYSUrgAFjX0eLMcUe3uEAZ1W6n" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -58,18 +59,6 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/controller" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="LibroController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/controller/LibroController.php">
@@ -101,6 +90,7 @@
       <workItem from="1580283196304" duration="4965000" />
       <workItem from="1580887657011" duration="5280000" />
       <workItem from="1581494526590" duration="4283000" />
+      <workItem from="1582024053895" duration="2840000" />
     </task>
     <servers />
   </component>
@@ -120,6 +110,64 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state width="450" height="540" key="DebuggerActiveHint" timestamp="1582025638628">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="450" height="540" key="DebuggerActiveHint/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582025638628" />
+    <state width="1253" height="215" key="GridCell.Tab.0.bottom" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.0.center" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.0.left" timestamp="1582027000075">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000075" />
+    <state width="1253" height="215" key="GridCell.Tab.0.right" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.1.bottom" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.1.bottom/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.1.center" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.1.center/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.1.left" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.1.left/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.1.right" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.1.right/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.2.bottom" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.2.bottom/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.2.center" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.2.center/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.2.left" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.2.left/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state width="1253" height="215" key="GridCell.Tab.2.right" timestamp="1582027000076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="215" key="GridCell.Tab.2.right/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582027000076" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582024053664">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582024053664" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -138,9 +186,19 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/model/Autentication.php</url>
+          <line>52</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/index.php</url>
-          <line>11</line>
-          <option name="timeStamp" value="5" />
+          <line>92</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/model/Autentication.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -46,7 +46,7 @@ class UsuarioController extends Controller
 
         if ($funciona) {
             $code = '200';
-            $cadena = Autentication::generateToken($usuario -> getName());
+            $cadena = Autentication::generateToken();
             $header['Authorization'] = "Bearer " . $cadena;
         }
         else {

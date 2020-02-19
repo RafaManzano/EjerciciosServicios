@@ -12,6 +12,8 @@ class LibroController extends Controller
         $id = null;
         $response = null;
         $code = null;
+        $token = "";
+        $cadena = "";
 
         //if the URI refers to a libro entity, instead of the libro collection
         if (isset($request->getUrlElements()[2])) {
@@ -23,6 +25,8 @@ class LibroController extends Controller
 
         if ($listaLibros != null) {
             $code = '200';
+            $cadena = Autentication::generateToken();
+            $token['Authorization'] = "Bearer " . $cadena;
 
         } else {
 
@@ -36,7 +40,7 @@ class LibroController extends Controller
 
         }
 
-        $response = new Response($code, null, $listaLibros, $request->getAccept());
+        $response = new Response($code, $token, $listaLibros, $request->getAccept());
         $response->generate();
 
     }
@@ -48,6 +52,8 @@ class LibroController extends Controller
         $response = null;
         $code = null;
         $body = null;
+        $token = "";
+        $cadena = "";
 
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
@@ -64,6 +70,8 @@ class LibroController extends Controller
 
         if ($funciona) {
             $code = '200';
+            $cadena = Autentication::generateToken();
+            $token['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (LibroHandlerModel::isValid($id)) {
@@ -72,7 +80,7 @@ class LibroController extends Controller
                 $code = '400';
             }
         }
-        $response = new Response($code, null, $libro, $request->getAccept());
+        $response = new Response($code, $token, $libro, $request->getAccept());
         $response->generate();
     }
 
@@ -82,6 +90,8 @@ class LibroController extends Controller
         $response = null;
         $code = null;
         $body = null;
+        $token = "";
+        $cadena = "";
 
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
@@ -95,6 +105,8 @@ class LibroController extends Controller
 
         if ($funciona) {
             $code = '200';
+            $cadena = Autentication::generateToken();
+            $token['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (LibroHandlerModel::isValid($id)) {
@@ -103,7 +115,7 @@ class LibroController extends Controller
                 $code = '400';
             }
         }
-        $response = new Response($code, null, $libro, $request->getAccept());
+        $response = new Response($code, $token, $libro, $request->getAccept());
         $response->generate();
     }
 
@@ -113,6 +125,7 @@ class LibroController extends Controller
         $response = null;
         $code = null;
         $body = null;
+        $token = "";
 
         $body = $request->getBodyParameters();
         //$json = $body->json_decode();
@@ -123,6 +136,8 @@ class LibroController extends Controller
 
         if ($funciona) {
             $code = '200';
+            $cadena = Autentication::generateToken();
+            $token['Authorization'] = "Bearer " . $cadena;
         }
         else {
             if (LibroHandlerModel::isValid($id)) {
@@ -131,7 +146,7 @@ class LibroController extends Controller
                 $code = '400';
             }
         }
-        $response = new Response($code, null, $request->getAccept());
+        $response = new Response($code, $token, $request->getAccept());
         $response->generate();
     }
 
