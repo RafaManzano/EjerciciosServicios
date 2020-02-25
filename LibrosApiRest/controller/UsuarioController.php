@@ -43,6 +43,7 @@ class UsuarioController extends Controller
         $usuario = new UsuarioModel();
         $usuario -> setName($name);
         $usuario -> setPassword($hashPassword);
+        $usuario -> setRol("user");
 
         if(!Autentication::checkUser($request)) {
             $cadena = $request -> getLlave();

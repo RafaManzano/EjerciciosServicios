@@ -1,11 +1,11 @@
 <?php
 
 use Firebase\JWT\JWT;
-use Firebase\JWT\SignatureInvalidException;
 
 require_once "JWT.php" ;
 require_once "ConsUsuariosModel.php" ;
 require_once "SignatureInvalidException.php";
+require_once "ExpiredException.php";
 
 class Autentication
 {
@@ -39,7 +39,7 @@ class Autentication
                 JWT::decode($token, $llave, array('HS256'));
                 $pasa = true;
             }
-            catch (SignatureInvalidException $e) {
+            catch (Exception $e) {
                 echo 'Ha ocurrido un error de autenticacion';
             }
 
@@ -77,15 +77,33 @@ class Autentication
         return $pasa;
     }
 
-    static function generateToken() {
+    static function generateToken($usuario = "null") {
         $llave = "compadre";
+        $rol = self::rolDeUsuario($usuario);
         $payload = array(
             "iss" => "http://biblioteca.devel",
-            "exp" => time() + 500
+            "exp" => time() + 500,
+            "rol" => $rol
         );
 
         $jwt = JWT::encode($payload, $llave);
         return $jwt;
+    }
+
+    static function rolDeUsuario($usuario) {
+        $rol = "null";
+        $db = DatabaseModel::getInstance();
+        $db_connection = $db -> getConnection();
+
+
+        if($usuario != "null") {
+            $query = "SELECT " . \ConstantesDB\ConsUsuariosModel::ROL. " FROM " . \ConstantesDB\ConsUsuariosModel::TABLE_NAME . " WHERE " . \ConstantesDB\ConsUsuariosModel::NAME . " = ? ";
+            $prep_query = $db_connection -> prepare($query);
+            $prep_query -> bind_param('s', $usuario);
+            $prep_query -> execute();
+            $prep_query -> bind_result( $rol);
+        }
+        return $rol;
     }
 
     static function getAuthorizationHeader(){

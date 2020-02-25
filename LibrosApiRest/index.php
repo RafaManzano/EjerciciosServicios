@@ -90,8 +90,14 @@ $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
 if(Autentication::checkAuthentication($usuario, $contrasena, $llave) || (ucfirst(strtolower($verb)) == "Post" && ucfirst($url_elements[1]) == "Usuario")) {
         if (class_exists($controller_name)) {
-            $llave = Autentication::generateToken();
-            $req -> setLlave($llave);
+            if($usuario != "") {
+                $llave = Autentication::generateToken($usuario);
+                $req -> setLlave($llave);
+            }
+            else {
+                //Tengo que darle mas vueltas, de momento no esta funcionando correctamente
+            }
+
             $controller = new $controller_name();
             $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
             $controller->$action_name($req);

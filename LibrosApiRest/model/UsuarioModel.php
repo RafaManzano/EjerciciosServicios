@@ -6,6 +6,7 @@ class UsuarioModel implements JsonSerializable
     private $id;
     private $name;
     private $password;
+    private $rol;
 
     /*
     public function __construct($id,$name,$password)
@@ -30,12 +31,13 @@ class UsuarioModel implements JsonSerializable
         return array(
             'id' => $this->id,
             'name' => $this->name,
-            'password' => $this->password
+            'password' => $this->password,
+            'rol' => $this->rol
         );
     }
 
     public function __sleep(){
-        return array('id' , 'name' , 'password' );
+        return array('id' , 'name' , 'password', 'rol' );
     }
 
 
@@ -78,4 +80,22 @@ class UsuarioModel implements JsonSerializable
     {
         $this->password = $password;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRol()
+    {
+        return $this->rol;
+    }
+
+    /**
+     * @param mixed $rol
+     */
+    public function setRol($rol)
+    {
+        $this->rol = $rol;
+    }
+
+
 }

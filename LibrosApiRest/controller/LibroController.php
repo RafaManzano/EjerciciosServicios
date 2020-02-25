@@ -1,5 +1,7 @@
 <?php
+use Firebase\JWT\JWT;
 
+require_once "JWT.php" ;
 require_once "Controller.php";
 
 
@@ -66,10 +68,12 @@ class LibroController extends Controller
         $libro -> setTitulo($titulo);
         $libro -> setNumpag($numpag);
 
-        $funciona = LibroHandlerModel::insertLibro($libro);
-
-        if ($funciona) {
-            $code = '200';
+        $comprobarRol = JWT::decode($cadena, "compadre", array('HS256'));
+        if($comprobarRol->rol == "admin") {
+            $funciona = LibroHandlerModel::insertLibro($libro);
+            if ($funciona) {
+                $code = '200';
+            }
         }
         else {
             if (LibroHandlerModel::isValid($id)) {

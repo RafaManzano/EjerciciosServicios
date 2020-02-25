@@ -8,4 +8,5 @@ class ConsUsuariosModel
     const ID = "id";
     const NAME = "name";
     const PASSWORD = "password";
+    const ROL = "rol";
 }
