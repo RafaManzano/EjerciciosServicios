@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7424f62b-e8a6-4770-8530-d23bf7c03eb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/LibroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LibroController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Autentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Autentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ConsUsuariosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ConsUsuariosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/UsuarioHandlerModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UsuarioHandlerModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/UsuarioModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UsuarioModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +89,7 @@
       <workItem from="1582024053895" duration="2840000" />
       <workItem from="1582097477577" duration="4254000" />
       <workItem from="1582627838702" duration="3121000" />
+      <workItem from="1582703617415" duration="976000" />
     </task>
     <servers />
   </component>
@@ -172,10 +166,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state width="1253" height="215" key="GridCell.Tab.2.right/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582630959913" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582627839056">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582703616573">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582627839056" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1582703616573" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,8 +200,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/model/Autentication.php</url>
-          <line>93</line>
-          <option name="timeStamp" value="14" />
+          <line>63</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
