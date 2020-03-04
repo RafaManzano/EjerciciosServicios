@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6da7ba19-41fc-432d-b5c4-12eb308ddab4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YcDg1AnN4LrkJkJAz7TjydK1Fs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="iesnervion.rmanzano.Main" />
+      <module name="HilosSenales" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="83" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1583234042191">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="524" y="83" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583234042191" />
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom" timestamp="1583309958872">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583309958872" />
+    <state width="1276" height="175" key="GridCell.Tab.0.center" timestamp="1583309958872">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583309958872" />
+    <state width="1276" height="175" key="GridCell.Tab.0.left" timestamp="1583309958871">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583309958871" />
+    <state width="1276" height="175" key="GridCell.Tab.0.right" timestamp="1583309958872">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583309958872" />
+    <state width="1276" height="219" key="GridCell.Tab.1.bottom" timestamp="1583236454284">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="219" key="GridCell.Tab.1.bottom/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583236454284" />
+    <state width="1276" height="219" key="GridCell.Tab.1.center" timestamp="1583236454284">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="219" key="GridCell.Tab.1.center/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583236454284" />
+    <state width="1276" height="219" key="GridCell.Tab.1.left" timestamp="1583236454284">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="219" key="GridCell.Tab.1.left/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583236454284" />
+    <state width="1276" height="219" key="GridCell.Tab.1.right" timestamp="1583236454284">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1276" height="219" key="GridCell.Tab.1.right/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583236454284" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1583306700604">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1366.768@67.27.1299.741" timestamp="1583306700604" />
+  </component>
+</project>
